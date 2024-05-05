@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  width: 100vw;
+  height: 100vh;
+  color: #333;
+  background: linear-gradient(
+    to top left,
+    red,
+    rgb(0, 106, 255),
+    purple,
+    black,
+    gold,
+    red
+  );
+  background-size: 400% 400%;
+  animation: animate 8s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Layout */
+main {
+  position: relative;
+  width: 100em;
+  height: 60em;
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(200px);
+  filter: blur();
+  box-shadow: 0 3em 5em rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+  overflow: hidden;
+  display: flex;
+}
+
+.player {
+  flex: 50%;
+  padding: 9em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.75s;
+}
+
+/* Element*/
+
+.name {
+  font-size: 4em;
+  text-transform: uppercase;
+  position: relative;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: 300;
+  margin-bottom: 1em;
+}
+
+.score {
+  font-size: 8em;
+  font-weight: 300;
+  margin-bottom: auto;
+  color: #ffffff85;
+}
+
+.player--active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.player--active .name {
+  font-weight: 700;
+}
+.player--active .score {
+  font-weight: 400;
+}
+.player--active .current {
+  opacity: 1;
+}
+.current {
+  opacity: 0.8;
+  border-radius: 9px;
+  color: #fff;
+  width: 65%;
+  text-align: center;
+  padding: 2em;
+  transition: all 0.75s;
+  background: linear-gradient(
+    to top left,
+    red,
+    rgb(0, 106, 255),
+    purple,
+    black,
+    gold,
+    red
+  );
+  background-size: 720% 720%;
+  animation: animate 8s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+
+.current-label{
+    text-transform: uppercase;
+    font-size: 1.7em;
+    margin-bottom: 1em;
+    color:#ddd;
+}
+
+.current-score{
+    font-size: 3.5em;
+}
+
+.btn{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #444;
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 400;
+    transition: all 0.2s;
+
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    padding: 0.7em 2.5em;
+    border-radius: 50em;
+    box-shadow: 0 1.75em 3.5em rgba(0, 0, 0, 0.1);
+}
+
+.btn--new{
+    top: 2em;
+}
+.btn--roll{
+    top: 22em;
+}
+.btn--hold{
+    top: 26em;
+}
+
+.btn:active{
+
+    transform: translate(-50%,3px);
+    box-shadow: 0 1em 2em rgba(0, 0, 0, 0.15);
+}
+.btn:focus{
+    outline: none;
+}
+
+.dice{
+    position: absolute;
+    right: 50%;
+    top: 16em;
+    border-radius: 20px;
+    transform: translateX(50%);
+    height: 14em;
+    box-shadow: 0 2em 5em rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, .75);
+    opacity: 0.67;
+}
+
+.player--winner{
+    background-color: #2f2f2f;
+}
+
+.player--winner .name{
+    font-weight: 700;
+    color: gold;
+}
+
+.player--winner .score{
+    color: gold !important;
+}
+
+.player--winner .current-label{
+    opacity: 1 !important;
+}
+
+.player--winner .current-score{
+    opacity: 1 !important;
+}
+
+.hidden{
+    display: none;
+}
+
+
+.music{
+  border-radius: 50%;
+  /* border: 1px solid black; */
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 4%;
+left:3%;
+box-shadow: 0px 0px 6em rgba(0, 0, 0, 0.25);
+background-color: rgba(255, 255, 255, 0.684);
+cursor: pointer;
+}
+
+.music img{
+  width: 100%;
+  height: 100%;
+  padding: 6px 6px 6px 7px;
+}
+
+.rotating{
+  animation: rotate 4800ms linear infinite;
+}
+
+@keyframes rotate{
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
