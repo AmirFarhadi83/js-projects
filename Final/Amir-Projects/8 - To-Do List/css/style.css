@@ -1,6 +1,102 @@
+:root {
+  --c-purple: #4e085f;
+  --c-blue-1: #153677;
+  --c-blue-2: #002765;
+  --c-yellow: #cedc07;
+  --c-pink: #8c1184;
+  --c-white-1: #fff;
+  --c-white-2: #edeef0;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--c-blue-1), var(--c-pink));
+  padding: 0.7em;
+}
+
+.todo-app {
+  width: 540px;
+  background: var(--c-white-1);
+  margin: 6.2em auto 1.2em;
+  padding: 2.5em 2em 4.3em;
+  border-radius: 10px;
+
+  h2 {
+    color: var(--c-blue-2);
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.2em;
+
+    i {
+      font-size: 1.5em;
+      margin-left: 0.5em;
+    }
   }
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--c-white-2);
+  border-radius: 2em;
+  padding-left: 1.2em;
+  margin-bottom: 1.5em;
+}
+
+.input-box {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0.7em;
+  font-weight: 1em;
+}
+
+.btn-add {
+  border: none;
+  outline: none;
+  padding: 1em 3em;
+  background: var(--c-blue-2);
+  color: var(--c-white-1);
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 2.5em;
+}
+
+.list-container li {
+  list-style: none;
+  font-size: 1.1em;
+  padding: 0.7em 0.5em 0.7em 3em;
+  user-select: none;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 1.7em;
+    height: 1.7em;
+    border-radius: 50%;
+    background-image: url(../assets/img/bx-circle.svg);
+    background-size: cover;
+    background-position: center;
+    inset: 0.5em;
+  }
+
+  &.checked {
+    color: var(--c-blue-1);
+    text-decoration: line-through;
+
+    &::before {
+      background-image: url(../assets/img/bxs-check-circle.svg);
+    }
+  }
+}
