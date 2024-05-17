@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css" />
     <title>To-Do List App</title>
-</head>
-<body>
-    
+  </head>
+  <body>
+    <div class="container">
+      <div class="todo-app">
+        <h2>
+          To-Do List <i class='bx bx-notepad'></i>
+        </h2>
+        <div class="row">
+          <input type="text" class="input-box" placeholder="Add Your Task" />
+          <button class="btn-add">Add</button>
+        </div>
+        <ul class="list-container">
+            <li class="checked">Task 1</li>
+            <li>Task 2</li>
+            <li>Task 3</li>
+        </ul>
+      </div>
+    </div>
+
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
