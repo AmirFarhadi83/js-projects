@@ -9,32 +9,61 @@
   <body>
     <section class="container">
       <div class="inputs">
-        <input type="text" name="text" id="textInp" placeholder="Text" />
-        <input type="text" name="style" id="styleInp" placeholder="Style" />
+        <input
+          type="text"
+          name="text"
+          id="textInp"
+          placeholder="Text"
+          required
+        />
+        <input
+          type="text"
+          name="style"
+          id="styleInp"
+          placeholder="Style"
+          required
+        />
         <select name="tags" id="tag"></select>
         <input
           type="text"
           name="attributes"
           id="attrInp"
           placeholder="Attribute"
+          required
         />
         <input
           type="text"
           name="class"
           id="classInp"
           placeholder="Class Name"
+          required
         />
         <button id="createBtn">Create</button>
       </div>
+
+      <div class="radioBox">
+        <input type="radio" name="options" id="append" value="append" />
+        <label for="append">Append</label>
+
+        <input type="radio" name="options" id="prepend" value="prepend" />
+        <label for="prepend">Prepend</label>
+
+        <input type="radio" name="options" id="after" value="after" />
+        <label for="after">After</label>
+
+        <input type="radio" name="options" id="before" value="before" />
+        <label for="before">Before</label>
+      </div>
+
       <div class="divs">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
       </div>
     </section>
     <script src="js/script.js"></script>
