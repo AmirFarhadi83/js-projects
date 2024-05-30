@@ -1,4 +1,4 @@
-Some Mini Projects With Html Css and JavaScript for students
+<h1>Some Mini Projects With html, css and JavaScript for students</h1>
 
 <h2>1. Responsive Burger Menu</h2>
 
