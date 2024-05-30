@@ -14,7 +14,7 @@ body {
 
 .container {
   background-color: #fff;
-  width: 90vw;
+  width: 90vmin;
   min-height: 65vh;
   position: absolute;
   transform: translate(-50%, -50%);
