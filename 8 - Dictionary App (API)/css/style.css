@@ -15,7 +15,7 @@ body {
 .container {
   background-color: #fff;
   width: 90vmin;
-  min-height: 65vh;
+  /* min-height: 65vh; */
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
@@ -50,7 +50,7 @@ body {
   }
 
   .result {
-    position: fixed;
+    /* position: fixed; */
     h3 {
       font-size: 2em;
       color: #1f194c;
