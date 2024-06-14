@@ -16,7 +16,7 @@ body {
 }
 
 .carousel-caption {
-  bottom: 16em;
+  bottom: 13em;
   z-index: 2;
   h5 {
     font-size: 3em;
@@ -69,14 +69,36 @@ nav .navbar-nav .navbar-link {
   height: 100vh;
 }
 
+.services .card-body i {
+  font-size: 3em;
+}
+
+.team .card-body{
+    font-size: 1.3em;
+}
+
+.portfolio .card{
+    box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.team.card{
+    box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
+}
+
 /* Responsive */
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .carousel-caption {
-    bottom: 23em;
+    top: 17em;
     p {
       width: 100%;
     }
+  }
+  .card{
+    margin-bottom: 2em;
+  }
+  .img-area img{
+    width: 100%;
   }
 }
 
@@ -85,7 +107,7 @@ nav .navbar-nav .navbar-link {
     text-align: center;
   }
   .carousel-caption {
-    bottom: 8em;
+    bottom: 15em;
     h5 {
       font-size: 1em;
     }
