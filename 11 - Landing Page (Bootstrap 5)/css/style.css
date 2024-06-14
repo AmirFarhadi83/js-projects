@@ -73,16 +73,16 @@ nav .navbar-nav .navbar-link {
   font-size: 3em;
 }
 
-.team .card-body{
-    font-size: 1.3em;
+.team .card-body {
+  font-size: 1.3em;
 }
 
-.portfolio .card{
-    box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
+.portfolio .card {
+  box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
 }
 
-.team.card{
-    box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
+.team.card {
+  box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 /* Responsive */
@@ -94,10 +94,10 @@ nav .navbar-nav .navbar-link {
       width: 100%;
     }
   }
-  .card{
+  .card {
     margin-bottom: 2em;
   }
-  .img-area img{
+  .img-area img {
     width: 100%;
   }
 }
