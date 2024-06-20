@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url(../assets/4k-laptop-yn553k4gdhpc4hlh.jpg);
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+nav {
+  background-color: white;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  width: 100%;
+}
+
+nav li {
+  height: 50px;
+}
+
+nav a {
+  height: 100%;
+  padding: 0px 2rem;
+  display: flex;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+}
+nav a:hover {
+  background-color: #f0f0f0;
+}
+nav li:first-child {
+  margin-right: auto;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  /*background-color: white;*/
+  box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.2);
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.sidebar li {
+  width: 100%;
+}
+
+.sidebar a {
+  width: 100%;
+}
+
+nav i{
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 7px 10px 0px 10px;
+    cursor: pointer;
+}
+
+.bx-menu{
+    display: none;
+}
+
+@media(max-width:800px){
+    .hideOnMobile{
+        display: none;
+    }
+    .bx-menu{
+        display: block;
+    }
+}
+
+@media(max-width:400px){
+    .sidebar{
+        width: 100%;
+    }
+}
