@@ -1,26 +1,34 @@
 "use strict";
 
-let container = document.querySelector(".container");
-let meme = document.querySelector("#meme");
-let title = document.querySelector("#title");
-let getMemeBtn = document.querySelector("#get-meme-btn");
-let subReddit = ["catmemes", "wholesomememes", "dogmemes", "me_irl"];
+const container = document.querySelector(".container");
+const meme = document.querySelector("#meme");
+const title = document.querySelector("#title");
+const getMemeBtn = document.querySelector("#get-meme-btn");
+let subreddits = ["catmemes", "wholeseomememes", "dogmemes", "me_irl"];
 
 async function getMeme() {
   try {
-    let randomSubReddit =
-      subReddit[Math.floor(Math.random() * subReddit.length)];
-    console.log(randomSubReddit);
-    const res = await fetch(`https://meme-api.com/gimme/${randomSubReddit}`);
-    const data = res.json();
+    let randomSubreddit =
+      subreddits[Math.floor(Math.random() * subreddits.length)];
+    console.log(randomSubreddit);
+    const res = await fetch(`https://meme-api.com/gimme/${randomSubreddit}`);
+    const data = await res.json();
+
     console.log(data);
-    container.innerHTML = `
-      <img src="${data.url}" alt="meme" id="meme" />
-        <h3 id="title">${data.title}</h3>`;
-  } catch (error) {
-    console.log(error);
+    const image = document.createElement("img");
+    image.setAttribute("src", data.url);
+    image.setAttribute("alt", data.title);
+    const h3Title = document.createElement("h3");
+    h3Title.textContent = data.title;
+    container.prepend(h3Title);
+    container.prepend(image);
+  } catch (err) {
+    console.log(err);
   }
 }
 
-getMemeBtn.addEventListener("click",getMeme);
-window.addEventListener('load',getMeme)
+getMemeBtn.onclick = () => {
+  getMeme();
+};
+
+window.addEventListener("load", getMeme);
