@@ -7,11 +7,18 @@
 
 body {
   background: #001e4d;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100svw;
+  height: 100svh;
 }
 
 .app {
   background: #fff;
   max-width: 600px;
+  min-width: 600px;
   margin: 100px auto;
   border-radius: 10px;
   padding: 30px;
@@ -78,4 +85,11 @@ body {
 }
 .incorrect {
   background: #ff9393;
+}
+
+@media screen and (max-width: 700px) {
+  .app {
+    max-width: 80%;
+    min-width: 80%;
+  }
 }

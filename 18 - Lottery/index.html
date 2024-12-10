@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>قرعه کشی هوشمند</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="lottery-section">
+        <div class="lottery-header">
+          <h1>قرعه کشی هوشمند</h1>
+          <div class="lottery-controls">
+            <input
+              type="text"
+              id="participant-input"
+              placeholder="نام شرکت کننده را وارد کنید"
+            />
+            <button id="add-participant">افزودن شرکت کننده</button>
+          </div>
+        </div>
+
+        <div class="lottery-winner">
+          <h2 class="winner-name"></h2>
+          <button class="random">شروع قرعه کشی</button>
+        </div>
+      </section>
+
+      <section class="lists">
+        <div class="participant">
+          <h2>شرکت کنندگان</h2>
+          <ol class="participant-list"></ol>
+        </div>
+        <div class="previous">
+          <h2>برندگان قبلی</h2>
+          <ol class="previous-list"></ol>
+        </div>
+      </section>
+    </div>
+
+    <div class="modal" id="result-modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h3>نتیجه قرعه کشی</h3>
+        <p class="modal-winner-text"></p>
+        <button class="confirm-modal">تایید</button>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

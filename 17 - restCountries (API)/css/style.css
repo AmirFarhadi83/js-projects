@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+.search-container {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+#search {
+  width: 300px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #3498db;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+#search-btn {
+  padding: 10px 15px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 0 5px 5px 0;
+  transition: background-color 0.3s ease;
+}
+
+#search-btn:hover {
+  background-color: #2980b9;
+}
+
+.loading {
+  text-align: center;
+  color: #e74c3c;
+  margin-bottom: 20px;
+}
+
+.information {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.main-country {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.country-flag img {
+  max-width: 200px;
+  max-height: 150px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin-right: 20px;
+}
+
+.country-info h2 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.country-additional-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.borders-section {
+  margin-top: 20px;
+}
+
+.borders {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.border-country {
+  text-align: center;
+  width: 100px;
+  padding: 10px;
+  background-color: #f1f3f5;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.border-country:hover {
+  transform: scale(1.05);
+}
+
+.border-country img {
+  max-width: 80px;
+  max-height: 50px;
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+
+.border-country h4 {
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+.hidden{
+    display: none;
+}
+
+@media (max-width: 768px) {
+  .main-country {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .country-flag img {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}

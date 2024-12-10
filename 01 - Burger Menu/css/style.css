@@ -2,27 +2,25 @@
   margin: 0;
   padding: 0;
 }
-
 body {
-  min-height: 100vh;
   background-image: url(../assets/4k-laptop-yn553k4gdhpc4hlh.jpg);
+  min-height: 100vh;
   background-size: cover;
   background-position: center;
   background-repeat: repeat;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-
 nav {
   background-color: white;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
-  width: 100%;
-  list-style: none;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  list-style: none;
+  width: 100%;
 }
 
 nav li {
@@ -31,17 +29,15 @@ nav li {
 
 nav a {
   height: 100%;
-  padding: 0 30px;
-  text-decoration: none;
+  padding: 0px 2rem;
   display: flex;
   align-items: center;
   color: black;
+  text-decoration: none;
 }
-
 nav a:hover {
   background-color: #f0f0f0;
 }
-
 nav li:first-child {
   margin-right: auto;
 }
@@ -53,17 +49,16 @@ nav li:first-child {
   height: 100vh;
   width: 250px;
   z-index: 999;
-  /* background-color: white; */
-  box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.1);
+  /*background-color: white;*/
+  box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.2);
   display: none;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: flex-start;
+  align-items: flex-start;
 
   backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.2);
 }
-
 .sidebar li {
   width: 100%;
 }
@@ -73,31 +68,29 @@ nav li:first-child {
 }
 
 nav i {
-    padding: 7px 10px 0px 10px;
-    height: 50px;
-    font-size: 40px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    color: black;
-    cursor: pointer;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding: 7px 10px 0px 10px;
+  cursor: pointer;
 }
 
-.bx-menu{
+.bx-menu {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .hideOnMobile {
     display: none;
+  }
+  .bx-menu {
+    display: block;
+  }
 }
 
-@media(max-width:800px){
-    .hideOnMobile{
-        display: none;
-    }
-    .bx-menu{
-        display: block;
-    }
-}
-
-@media(max-width:400px){
-    .sidebar{
-       width: 55%;
-    }
+@media (max-width: 400px) {
+  .sidebar {
+    width: 55%;
+  }
 }

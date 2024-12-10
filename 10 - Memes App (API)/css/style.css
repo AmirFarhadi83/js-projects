@@ -18,36 +18,78 @@ body {
   left: 50%;
   border-radius: 0.6em;
   box-shadow: 0 1.4em 3em rgba(20, 16, 39, 0.3);
+}
 
-  img {
-    display: block;
-    height: 25em;
-    max-width: 80%;
-    margin: 0 auto 2em;
+.container img {
+  display: block;
+  height: 25em;
+  max-width: 80%;
+  margin: 0 auto 2em;
+}
+
+.container h3 {
+  display: block;
+  font-size: 1em;
+  margin: 0.5em auto 2em;
+  width: 70%;
+  font-weight: 400;
+  text-align: center;
+  text-transform: capitalize;
+  color: #737081;
+  letter-spacing: 0.03em;
+}
+
+.container button {
+  display: block;
+  margin: 0 auto;
+  font-size: 1.2em;
+  padding: 0.8em 2em;
+  border-radius: 2em;
+  background-color: #7f5eff;
+  border: none;
+  outline: none;
+  color: #fff !important;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 830px) {
+  .container img {
+    height: 20em;
   }
+}
 
-  h3 {
-    display: block;
-    font-size: 1em;
-    margin: 0.5em auto 2em;
-    width: 70%;
-    font-weight: 400;
-    text-align: center;
-    text-transform: capitalize;
-    color: #737081;
-    letter-spacing: 0.03em;
+@media screen and (max-width: 700px) {
+  .container img {
+    height: 15em;
   }
+}
 
-  button {
-    display: block;
-    margin: 0 auto;
-    font-size: 1.2em;
-    padding: 0.8em 2em;
-    border-radius: 2em;
-    background-color: #7f5eff;
-    border: none;
-    outline: none;
-    color: #fff !important;
-    cursor: pointer;
+@media screen and (max-width: 500px) {
+  .container img {
+    height: 13em;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container img {
+    height: 11em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container img {
+    height: 11em;
+  }
+}
+
+@media screen and (max-width: 250px) {
+  .container img {
+    height: 9em;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .container img {
+    height: 7em;
   }
 }

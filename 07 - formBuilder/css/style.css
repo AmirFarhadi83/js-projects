@@ -1,5 +1,6 @@
 :root {
   --c-1: #dcdcdc;
+  --primary-font-size: 1rem;
 }
 
 * {
@@ -11,95 +12,136 @@
 body {
   overflow-x: hidden;
   background-color: var(--c-1);
+  font-family: Arial, sans-serif;
+  font-size: var(--primary-font-size);
+  line-height: 1.6;
 }
-
+h1 {
+  color: #fff;
+  padding: 0.9em;
+  text-shadow: -2px 2px 7px black;
+}
 .container {
-  padding: 2em 0;
-  width: 100vw;
+  padding: 2em 1em;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+}
 
-  .inputs {
-    width: 60vw;
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 2em;
+.inputs {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
 
-    input {
-      width: 20vw;
-      padding: 1em;
-      border-radius: 2em;
-      border: none;
-      box-shadow: inset 0 0 6px 2px rgba(0, 0, 0, 0.5);
-      font-size: 1em;
-    }
+.inputs input,
+.inputs button,
+.inputs #tag {
+  width: 100%;
+  max-width: 200px;
+  padding: 0.8em;
+  border-radius: 1.5em;
+  border: none;
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+}
 
-    #tag {
-      width: 7vw;
-      padding: 1em;
-      border-radius: 2em;
-      border: none;
-      text-align: center;
-      box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.5);
-      font-size: 1em;
-      cursor: pointer;
+.inputs button,
+.inputs #tag {
+  text-align: center;
+  cursor: pointer;
+}
 
-      option {
-        color: black !important;
-      }
-    }
+.divs {
+  margin-top: 2em;
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1em;
+}
 
-    button {
-      width: 7vw;
-      padding: 1em;
-      border-radius: 2em;
-      border: none;
-      text-align: center;
-      box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.5);
-      font-size: 1em;
-      cursor: pointer;
-    }
+.divs div {
+  flex: 1;
+  max-width: 400px;
+  max-height: 400px;
+  height: auto;
+  aspect-ratio: 3 / 5;
+  background-color: #fff;
+  border-radius: 1.5em;
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.radioBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1em;
+  font-size: 1.2rem;
+  margin-top: 3em;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .inputs input,
+  .inputs button,
+  .inputs #tag {
+    max-width: 150px;
   }
+}
 
-  .divs {
-    margin-top: 2em;
-    width: 80vw;
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 2em;
-
-    div {
-      width: 15vw;
-      height: 28vh;
-      background-color: #fff;
-      border-radius: 2em;
-      box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.5);
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
+@media (max-width: 768px) {
+  .inputs input,
+  .inputs button,
+  .inputs #tag {
+    font-size: 0.9rem;
   }
 
   .radioBox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 2em;
-    font-size: 1.5em;
-    margin-top: 4em;
+    font-size: 1rem;
+  }
+
+  .divs div {
+    flex: 1 1 calc(100% - 1em);
+  }
+}
+
+@media (max-width: 480px) {
+  .inputs input,
+  .inputs button,
+  .inputs #tag {
+    max-width: 100%;
+  }
+
+  .inputs {
+    gap: 0.5em;
+  }
+
+  .divs {
+    gap: 0.5em;
+  }
+
+  .radioBox {
+    font-size: 0.9rem;
+  }
+
+  .divs div {
+    flex: 1;
+    max-width: 270px;
+    max-height: 270px;
   }
 }

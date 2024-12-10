@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country Information Explorer</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Country Information Explorer</h1>
+      <div class="search-container">
+        <input type="text" id="search" placeholder="Enter a country name" />
+        <button id="search-btn">Search</button>
+      </div>
+
+      <p class="loading"></p>
+
+      <section class="information hidden">
+        <div class="country-details">
+          <div class="main-country">
+            <div class="country-flag"></div>
+            <div class="country-info"></div>
+          </div>
+          <div class="country-additional-info"></div>
+        </div>
+
+        <div class="borders-section">
+          <h3>Neighboring Countries</h3>
+          <div class="borders"></div>
+        </div>
+      </section>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

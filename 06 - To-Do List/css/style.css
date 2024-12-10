@@ -15,31 +15,40 @@
   box-sizing: border-box;
 }
 
-.container {
-  width: 100vw;
-  min-height: 100vh;
+body {
+  width: 100svw;
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   background: linear-gradient(135deg, var(--c-blue-1), var(--c-pink));
+  overflow-x: hidden;
+}
+
+.container {
+  width: min(90vw, 600px);
   padding: 0.7em;
 }
 
 .todo-app {
-  width: 540px;
+  width: 100%;
   background: var(--c-white-1);
-  margin: 6.2em auto 1.2em;
-  padding: 2.5em 2em;
+  margin: clamp(3em, 10vw, 6.2em) auto 1.2em;
+  padding: clamp(1em, 5vw, 2.5em) clamp(1em, 5vw, 2em);
   border-radius: 10px;
+}
 
-  h2 {
-    color: var(--c-blue-2);
-    display: flex;
-    align-items: center;
-    margin-bottom: 1.2em;
+.todo-app h2 {
+  color: var(--c-blue-2);
+  display: flex;
+  align-items: center;
+  margin-bottom: clamp(0.6em, 3vw, 1.2em);
+}
 
-    i {
-      font-size: 1.5em;
-      margin-left: 0.5em;
-    }
-  }
+.todo-app h2 i {
+  font-size: clamp(1em, 5vw, 1.5em);
+  margin-left: 0.5em;
 }
 
 .row {
@@ -50,83 +59,133 @@
   border-radius: 2em;
   padding-left: 1.2em;
   margin-bottom: 1.5em;
+  width: 100%;
+  flex-wrap: nowrap;
 }
 
 .input-box {
+  width: 100%;
   flex: 1;
   border: none;
   outline: none;
   background: transparent;
   padding: 0.7em;
-  font-weight: 1em;
+  font-size: clamp(0.8em, 3vw, 1em);
 }
 
 .btn-add {
   border: none;
   outline: none;
-  padding: 1em 3em;
+  padding: clamp(0.5em, 3vw, 1em) clamp(1em, 10vw, 3em);
   background: var(--c-blue-2);
   color: var(--c-white-1);
-  font-size: 1em;
+  font-size: clamp(0.8em, 3vw, 1em);
   cursor: pointer;
   border-radius: 2.5em;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-container {
+  width: 100%;
 }
 
 .list-container li {
   list-style: none;
-  font-size: 1.1em;
+  font-size: clamp(0.9em, 4vw, 1.1em);
   padding: 0.7em 0.5em 0.7em 3em;
   user-select: none;
   position: relative;
+  max-width: 95%;
+  word-break: break-all;
+  line-break: normal;
+}
 
-  &::before {
-    content: "";
-    position: absolute;
-    width: 1.7em;
-    height: 1.7em;
-    border-radius: 50%;
-    background-image: url(../assets/img/bx-circle.svg);
-    background-size: cover;
-    background-position: center;
-    inset: 0.5em;
-  }
+.list-container li::before {
+  content: "";
+  position: absolute;
+  width: 1.7em;
+  height: 1.7em;
+  border-radius: 50%;
+  background-image: url(../assets/img/bx-circle.svg);
+  background-size: cover;
+  background-position: center;
+  inset: 0.5em;
+}
 
-  &.checked {
-    color: var(--c-blue-1);
-    text-decoration: line-through;
+.list-container li.checked {
+  color: var(--c-blue-1);
+  text-decoration: line-through;
+}
 
-    &::before {
-      background-image: url(../assets/img/bxs-check-circle.svg);
-    }
-  }
+.list-container li.checked::before {
+  background-image: url(../assets/img/bxs-check-circle.svg);
+}
 
-  span {
-    position: absolute;
-    right: 0.1em;
-    top: 0.25em;
-    width: 1em;
-    height: 1em;
-    line-height: 1em;
-    font-size: 1.8em;
-    color: var(--c-blue-2);
-    text-align: center;
-    border-radius: 50%;
-    padding-top: 0.045em;
+.list-container li span {
+  position: absolute;
+  right: 0.1em;
+  top: 0.25em;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
+  font-size: clamp(1.2em, 6vw, 1.8em);
+  color: var(--c-blue-2);
+  text-align: center;
+  border-radius: 50%;
+  padding-top: 0.045em;
+  cursor: pointer;
+  padding-left: 1em;
+}
 
-    &:hover {
-      background: var(--c-white-2);
-    }
-  }
+.list-container li span:hover {
+  background: var(--c-white-2);
 }
 
 .alert {
-  /* display: flex; */
   display: none;
   align-items: center;
   justify-content: center;
-  font-size: 1.5em;
+  font-size: clamp(1em, 5vw, 1.5em);
   font-weight: 700;
   color: red;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
   padding: 0.7em;
+  text-align: center;
+}
+
+/* Enhanced Responsive Breakpoints */
+@media screen and (max-width: 768px) {
+  body {
+    justify-content: center;
+  }
+
+  .todo-app {
+    margin: 1em auto;
+  }
+
+  .input-box {
+    width: 70%;
+  }
+
+  .btn-add {
+    width: 30%;
+  }
+}
+
+/* Landscape mode adjustments */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .container {
+    width: 80%;
+  }
+  .todo-app {
+    margin: 0.5em auto;
+  }
+
+  .row {
+    gap: 0.5em;
+  }
 }

@@ -46,6 +46,7 @@ body {
   font-size: 1em;
   text-transform: uppercase;
   font-weight: 500;
+  color: #000;
 }
 
 nav .navbar-brand {
@@ -54,22 +55,17 @@ nav .navbar-brand {
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 2px;
-}
-
-nav .navbar-brand:focus,
-nav .navbar-brand:hover {
-  color: #000;
-}
-
-nav .navbar-nav .navbar-link {
-  color: #000;
+  &:hover,
+  &:focus {
+    color: #000;
+  }
 }
 
 .w-100 {
   height: 100vh;
 }
 
-.services .card-body i {
+.services .card-body {
   font-size: 3em;
 }
 
@@ -81,11 +77,9 @@ nav .navbar-nav .navbar-link {
   box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
 }
 
-.team.card {
+.team .card {
   box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
 }
-
-/* Responsive */
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .carousel-caption {
@@ -106,6 +100,7 @@ nav .navbar-nav .navbar-link {
   .navbar-nav {
     text-align: center;
   }
+
   .carousel-caption {
     bottom: 15em;
     h5 {

@@ -1,19 +1,20 @@
 "use strict";
 
-const sidebarEl = document.querySelector(".sidebar");
 const menuBtn = document.querySelector(".bx-menu");
-const closeBtn = document.querySelector("i.bx.bx-x");
+const sidebarEl = document.querySelector(".sidebar");
 
-// menuBtn.addEventListener("click", () => {
-//   sidebarEl.style.display = "flex";
-// });
+const closeBtn = document.querySelector(".bx-x");
 
-// closeBtn.addEventListener("click", () => {
-//   sidebarEl.style.display = "none";
-// });
+// menuBtn.addEventListener('click', function () {
+//     sidebarEl.style.display = 'flex';
+// })
+
+// closeBtn.addEventListener('click', function () {
+//     sidebarEl.style.display = 'none';
+// })
 
 window.addEventListener("click", function (e) {
-  if (e.target.closest(".bx-menu") || e.target.closest(".sidebar")) {
+  if (e.target.closest(".sidebar") || e.target.closest(".bx-menu")) {
     sidebarEl.style.display = "flex";
   } else {
     sidebarEl.style.display = "none";
