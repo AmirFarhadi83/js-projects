@@ -1,0 +1,79 @@
+.my-popup {
+  width: 40ssvw;
+  height: 33vh;
+  background: white;
+  box-sizing: border-box;
+  padding: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  border-radius: 20px;
+  border: 20px solid var(--bg-color-grey);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width: 1300px) {
+    width: 45ssvw;
+    height: 31vh;
+  }
+
+  @media screen and (max-width: 1040px) {
+    width: 50ssvw;
+    height: 28vh;
+  }
+
+  @media screen and (max-width: 860px) {
+    width: 60ssvw;
+    height: 33vh;
+  }
+
+  @media screen and (max-width: 650px) {
+    width: 70ssvw;
+    height: 33vh;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 80ssvw;
+    height: 33vh;
+  }
+}
+
+.my-popup h2 {
+  color: gold;
+  font-size: 9rem;
+  font-family: serif;
+  border-radius: 20px;
+
+  @media screen and (max-width: 1300px) {
+    font-size: 8rem;
+  }
+  @media screen and (max-width: 1230px) {
+    font-size: 7rem;
+  }
+  @media screen and (max-width: 1040px) {
+    font-size: 6rem;
+  }
+
+  @media screen and (max-width: 860px) {
+    font-size: 5rem;
+  }
+
+  @media screen and (max-width: 650px) {
+    font-size: 4rem;
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 3rem;
+  }
+}
+
+.displayBlock {
+  opacity: 1 !important;
+  visibility: visible !important;
+}

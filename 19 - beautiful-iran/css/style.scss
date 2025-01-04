@@ -1,0 +1,58 @@
+@use "_mainArt.scss";
+@use "_mainCulture.scss";
+@use "_mainHistory.scss";
+@use "_mainPeople.scss";
+@use "_mainTourist.scss";
+@use "_footer.scss";
+@use "_modal.scss";
+@use "_body.scss";
+@use "_variables.scss";
+@use "_header.scss";
+
+header {
+  position: relative;
+  z-index: 100;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+
+  #btn-scroll {
+    position: fixed !important;
+    display: flex !important;
+    z-index: 1 !important;
+    top: 63%;
+    left: 2%;
+
+    @media screen and (max-width: 415px) {
+      top: 80%;
+    }
+
+    a {
+      padding: 20px !important;
+      text-decoration: none !important;
+      z-index: 1 !important;
+
+      i {
+        font-size: 60px !important;
+        border-radius: 10px;
+        color: rgb(255, 255, 255) !important;
+        background-color: var(--bg-color-grey);
+        z-index: 1 !important;
+        transition: all 0.3s;
+
+        &:hover {
+          color: var(--bg-color-grey) !important;
+          background-color: white;
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
+}
+
+footer {
+  position: sticky;
+  bottom: 0;
+}

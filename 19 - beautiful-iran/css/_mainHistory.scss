@@ -1,0 +1,140 @@
+#history {
+  margin: 0;
+  width: 100vw;
+  height: auto;
+  background-color: rgb(155, 155, 155);
+  padding-bottom: 3rem;
+}
+
+.history-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.farvahar {
+  margin: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 520px;
+
+  @media screen and (max-width: 1380px) {
+    width: 450px;
+    gap: 20px;
+    height: auto;
+  }
+
+  @media screen and (max-width: 1060px) {
+    width: 400px;
+    gap: 20px;
+    height: auto;
+  }
+
+  @media screen and (max-width: 900px) {
+    width: 350px;
+    gap: 20px;
+    height: auto;
+  }
+}
+
+.farvahar img {
+  width: 100%;
+}
+
+#history h2 {
+  margin-top: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 4rem !important;
+  font-family: serif;
+  letter-spacing: 8px;
+  font-weight: bold;
+  color: white;
+  padding: 3rem 1rem;
+  position: absolute;
+  text-shadow: 5px 5px 5px black;
+
+  @media screen and (max-width: 1380px) {
+    font-size: 3rem !important;
+  }
+
+  @media screen and (max-width: 910px) {
+    font-size: 2rem !important;
+  }
+}
+
+#history .history-info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: space-around;
+  justify-content: center;
+  align-items: stretch;
+  width: 40vw;
+  height: 200vh;
+  gap: 50px;
+
+  @media screen and (max-width: 1380px) {
+    width: 20vw;
+    gap: 50px;
+    height: auto;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 1060px) {
+    width: 15vw;
+    gap: 30px;
+    height: auto;
+    justify-content: center;
+  }
+}
+
+#history .history-info img {
+  width: 100%;
+  height: 100%;
+
+  @media screen and (max-width: 840px) {
+    display: none;
+  }
+}
+
+#history .history-info p {
+  text-align: justify;
+  color: white;
+  padding: 30px;
+  width: 600px;
+  height: auto;
+  border: 5px solid rgb(255, 217, 0);
+  font-size: 16.5px;
+  border-radius: 12px;
+
+  @media screen and (max-width: 1380px) {
+    width: 400px;
+  }
+
+  @media screen and (max-width: 920px) {
+    width: 350px;
+  }
+
+  @media screen and (max-width: 700px) {
+    width: 300px;
+  }
+}
+
+#more {
+  display: none;
+}
+
+#myBtn {
+  background-color: rgb(255, 217, 0);
+  padding: 5px 10px;
+  border-radius: 24px;
+  border: 2px solid white;
+  color: white;
+  font-family: serif;
+}

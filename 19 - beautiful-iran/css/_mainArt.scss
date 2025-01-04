@@ -1,0 +1,35 @@
+#art {
+  margin: 0;
+  width: 100svw;
+  height: auto;
+  background-color: var(--bg-color-grey);
+  padding-bottom: 3rem;
+
+  h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 4rem !important;
+    font-family: serif;
+    letter-spacing: 8px;
+    font-weight: bold;
+    color: white;
+    padding: 3rem 1rem;
+  }
+
+  .art-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin-left: 10%;
+  }
+  .col {
+    transition: all 0.5s;
+  }
+  .col:hover {
+    padding: 0;
+  }
+}

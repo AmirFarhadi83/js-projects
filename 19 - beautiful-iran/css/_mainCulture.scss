@@ -1,0 +1,104 @@
+#culture {
+  margin: 0;
+  width: 100svw;
+  height: auto;
+  background-color: rgb(240, 240, 240);
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 4rem !important;
+    font-family: serif;
+    letter-spacing: 8px;
+    font-weight: bold;
+    color: grey;
+    padding: 3rem 1rem;
+  }
+
+  .culture-items {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: space-around;
+    gap: 100px;
+
+    .culture-items-1 {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      gap: 100px 200px;
+      align-items: stretch;
+      align-content: center;
+    }
+
+    @media screen and (max-width: 1310px) {
+      margin: 0px 30px;
+    }
+  }
+
+  .culture-items-1-p {
+    text-align: justify;
+    max-width: 750px;
+    border-width: 6px;
+    border-style: solid;
+    border-image: linear-gradient(to right, white, black) 2;
+
+    p {
+      color: grey;
+      text-shadow: 0px 1px 1px #000;
+      font-size: 1.5rem;
+      padding: 20px;
+    }
+
+    @media screen and (max-width: 800px) {
+      margin: 0px 30px;
+    }
+
+    @media screen and (max-width: 600px) {
+      text-align: left;
+    }
+  }
+
+  .culture-items-2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 100px 200px;
+    align-items: stretch;
+    align-content: center;
+  }
+
+  .culture-items-2-p {
+    text-align: justify;
+    max-width: 750px;
+    border-width: 6px;
+    border-style: solid;
+    border-image: linear-gradient(to right, black, white) 2;
+
+    p {
+      color: grey;
+      text-shadow: 0px 1px 1px #000;
+      font-size: 1.5rem;
+      padding: 20px;
+    }
+
+    @media screen and (max-width: 800px) {
+      margin: 0px 30px;
+    }
+
+    @media screen and (max-width: 600px) {
+      text-align: left;
+    }
+  }
+}

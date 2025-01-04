@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box !important;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+body,
+html {
+  overflow-x: hidden;
+  max-width: 100svw;
+}

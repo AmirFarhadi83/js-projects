@@ -213,66 +213,93 @@ const styleInpEl = document.querySelector("#styleInp");
 const attrInpEl = document.querySelector("#attrInp");
 const classInpEl = document.querySelector("#classInp");
 const selectEl = document.querySelector("#tag");
-const createBtnEL = document.querySelector("#createBtn");
+const createBtnEl = document.querySelector("#createBtn");
 const divsEl = [...document.querySelectorAll(".item")];
 const radioGroup = document.querySelector(".radioBox");
 
-let text,
-  styles,
-  type,
-  attr,
-  classes,
-  arrayStyles,
-  arrayClasses,
-  arrayAttr,
-  element,
-  selectedOption;
-
-let created = false;
+let text = "",
+  styles = "",
+  type = "",
+  attr = "",
+  classes = "";
+let arrayStyles = [],
+  arrayClasses = [],
+  arrayAttr = [];
+let element = null,
+  selectedOption = "",
+  created = false;
 
 function init() {
+  // Reset input fields and flags
   textInpEl.value = "";
   styleInpEl.value = "";
-  selectEl.value = "";
-  classInpEl.value = "";
   attrInpEl.value = "";
-  element = "";
+  classInpEl.value = "";
+  selectEl.value = "";
+  element = null;
   selectedOption = "";
+  created = false;
 }
 
 function getValues() {
-  text = textInpEl.value;
-  styles = styleInpEl.value;
-  type = selectEl.value;
-  classes = classInpEl.value;
-  attr = attrInpEl.value;
+  // Extract values from input fields
+  text = textInpEl.value.trim();
+  styles = styleInpEl.value.trim();
+  type = selectEl.value.trim();
+  classes = classInpEl.value.trim();
+  attr = attrInpEl.value.trim();
 }
 
 function valuesToArray() {
+  // Parse styles, classes, and attributes
   arrayStyles = styles
-    .split(";")
-    .map((e) => e.trim())
-    .map((e) => e.split(":"));
-  arrayClasses = classes.split(",").map((e) => e.trim());
-  arrayAttr = attr.split("=").map((e) => e.trim());
-  console.log(arrayStyles);
+    ? styles.split(";").map((e) =>
+        e
+          .trim()
+          .split(":")
+          .map((s) => s.trim())
+      )
+    : [];
+  arrayClasses = classes ? classes.split(",").map((e) => e.trim()) : [];
+  arrayAttr = attr ? attr.split("=").map((e) => e.trim()) : [];
 }
 
 radioGroup.addEventListener("change", (e) => {
   selectedOption = e.target.value;
-  console.log(selectedOption);
 });
 
 function createHtmlElement() {
+  // Ensure a valid tag is selected
+  if (!type) {
+    alert("Please select a valid HTML tag.");
+    return;
+  }
+
   element = document.createElement(type);
   element.textContent = text;
-  element.setAttribute(arrayAttr[0], arrayAttr[1]);
-  element.setAttribute("style", arrayStyles.map((e) => e.join(":")).join("; "));
-  element.classList.add(arrayClasses.join(" "));
+
+  // Set attributes
+  if (arrayAttr.length === 2) {
+    element.setAttribute(arrayAttr[0], arrayAttr[1]);
+  }
+
+  // Set styles
+  if (arrayStyles.length > 0) {
+    const styleString = arrayStyles
+      .map(([key, value]) => `${key}:${value}`)
+      .join("; ");
+    element.setAttribute("style", styleString);
+  }
+
+  // Set classes
+  if (arrayClasses.length > 0) {
+    element.classList.add(...arrayClasses);
+  }
+
   created = true;
 }
 
-createBtnEL.addEventListener("click", function () {
+createBtnEl.addEventListener("click", () => {
   getValues();
   valuesToArray();
   createHtmlElement();
@@ -280,7 +307,7 @@ createBtnEL.addEventListener("click", function () {
 
 divsEl.forEach((div) => {
   div.addEventListener("click", () => {
-    if (created) {
+    if (created && element) {
       switch (selectedOption) {
         case "append":
           div.append(element);
@@ -294,15 +321,19 @@ divsEl.forEach((div) => {
         case "before":
           div.before(element);
           break;
+        default:
+          alert("Please select an action (append, prepend, after, before).");
       }
       init();
+    } else {
+      alert("Please create an element first.");
     }
   });
 });
 
-htmlTags.forEach((e) => {
-  let option = document.createElement("option");
-  option.value = e;
-  option.textContent = e;
+htmlTags.forEach((tag) => {
+  const option = document.createElement("option");
+  option.value = tag;
+  option.textContent = tag;
   selectEl.append(option);
 });
