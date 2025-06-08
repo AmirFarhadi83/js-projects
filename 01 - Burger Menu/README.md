@@ -1,5 +1,10 @@
 # 🍔 Burger Menu
 
+## 🖼️ Schema
+
+![burger-menu-app-1](https://github.com/user-attachments/assets/7838fd5f-c566-4221-b464-ed17bf58ac67)
+![burger-menu-app-2](https://github.com/user-attachments/assets/046bac3f-0957-4284-9581-57259f528a08)
+
 ## ✨ Description
 
 Simple Example of a nice burger menu!
