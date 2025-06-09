@@ -1,10 +1,5 @@
 # 🍔 Burger Menu
 
-## 🖼️ Schema
-
-<img src="https://github.com/user-attachments/assets/7838fd5f-c566-4221-b464-ed17bf58ac67" alt="burger-menu-app-1">
-<img src="https://github.com/user-attachments/assets/046bac3f-0957-4284-9581-57259f528a08" alt="burger-menu-app-2">
-
 ## ✨ Description
 
 Simple Example of a nice burger menu!
@@ -29,3 +24,7 @@ Enchant your local machine with these steps:
   # Install dependencies
   npm install
   ```
+## 🖼️ Schema
+
+<img src="https://github.com/user-attachments/assets/7838fd5f-c566-4221-b464-ed17bf58ac67" alt="burger-menu-app-1">
+<img src="https://github.com/user-attachments/assets/046bac3f-0957-4284-9581-57259f528a08" alt="burger-menu-app-2">
