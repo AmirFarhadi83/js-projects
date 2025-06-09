@@ -26,5 +26,5 @@ Enchant your local machine with these steps:
   ```
 ## 🖼️ Schema
 
-<img src="https://github.com/user-attachments/assets/7838fd5f-c566-4221-b464-ed17bf58ac67" alt="burger-menu-app-1">
-<img src="https://github.com/user-attachments/assets/046bac3f-0957-4284-9581-57259f528a08" alt="burger-menu-app-2">
+<img src="https://github.com/user-attachments/assets/0f6736ea-6912-4d48-a002-44d1480bf64b" alt="burger-menu-app-1">
+<img src="https://github.com/user-attachments/assets/47c13c02-a71b-4b24-9ed4-4438852fc061" alt="burger-menu-app-2">
